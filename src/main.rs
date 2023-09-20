@@ -1,4 +1,5 @@
 use std::process::{Command, exit};
+use names::Generator;
 
 fn update_commit_push() {
     // Command 1: Add all files recursively to git repo
@@ -18,7 +19,7 @@ fn update_commit_push() {
         .arg("commit")
         .arg("-a")
         .arg("-m")
-        .arg("UPDATEDDEDDED OH YEAHH!")
+        .arg(name_generator())
         .output()
         .expect("Failed to execute git commit command");
 
@@ -42,7 +43,10 @@ fn update_commit_push() {
 
     println!("Successfully added, committed, and pushed changes!\nKAAY VISHAY NAI NANA, pathavle warti");
 }
-
+fn name_generator() -> String{
+let mut generator = Generator::default();
+    generator.next().unwrap()
+}
 fn main() {
     update_commit_push();
 }
