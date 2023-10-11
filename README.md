@@ -13,13 +13,15 @@ To use **BhejDe**, follow these steps:
 2. Run the following command:
 
 ```bash
-bhejde
+bhejde [commit-message]
 ```
+
+- `[commit-message]` (Optional): Custom commit message. If not provided, a random message will be generated.
 
 This command will execute the tool and perform the following operations:
 
 1. Add all files recursively to the Git repository.
-2. Commit all changes with a randomly generated commit message.
+2. Commit all changes with the provided or randomly generated commit message.
 3. Push the changes to the remote repository (origin main branch).
 
 ## Installation
@@ -56,6 +58,8 @@ cargo install --path .
 
 - `names`: This dependency is used to generate random commit messages. You can find more information about this crate [here](https://crates.io/crates/names).
 
+- `colored`: This crate is used to add color to the output of the tool. You can find more information about this crate [here](https://crates.io/crates/colored).
+
 - `std::os`: This module is part of the Rust standard library and is used for interacting with the operating system. It is used in this project for handling process exit codes.
 
 ## License
@@ -65,10 +69,3 @@ This project is released under the MIT License - see the [LICENSE](LICENSE) file
 ## Contributing
 
 If you'd like to contribute to this project, feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/lordofwizard/bhejde).
-
-## Acknowledgments
-
-Special thanks to [lordofwizard][https://github.com/lordofwizard] contributors who have created this awesome project.
-
----
-
