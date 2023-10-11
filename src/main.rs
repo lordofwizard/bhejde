@@ -63,5 +63,4 @@ fn main() {
         None
     };
     update_commit_push(commit_message.map(|x| x.as_str()));
-
 }
